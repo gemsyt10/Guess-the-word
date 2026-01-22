@@ -1,0 +1,97 @@
+/* ===== БАЗА ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 600;
+}
+
+body {
+  background: rgb(15, 10, 80);
+  font-family: Arial, sans-serif;
+}
+
+/* ===== GRID КОНТЕЙНЕР ===== */
+.layout {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "words"
+    "input"
+    "button";
+
+  gap: 20px;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== ОБЛАСТІ GRID ===== */
+.title {
+  grid-area: title;
+  text-align: center;
+}
+
+.container-words {
+  grid-area: words;
+  background: rgb(10, 7, 40);
+  min-height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+
+  /* внутрішній grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25px);
+  gap: 5px;
+}
+
+.container-input {
+  grid-area: input;
+  display: flex;
+  gap: 10px;
+}
+
+#go-btn {
+  grid-area: button;
+  width: 100%;
+}
+
+/* ===== ЕЛЕМЕНТИ ===== */
+.element {
+  background: #1D0750;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* ===== INPUT ===== */
+input {
+  background: rgb(55, 45, 128);
+  border: 3px solid rgb(45, 35, 105);
+  border-radius: 12px;
+  box-shadow: 2px 1px 1px rgb(70, 50, 196);
+  height: 35px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* ===== BUTTON ===== */
+button {
+  background: rgb(55, 45, 128);
+  border: 3px solid rgb(65, 40, 156);
+  border-radius: 15px;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 1.5px 1px 10px rgb(65, 45, 150);
+}
+
+button:active {
+  transform: scale(0.91);
+}
